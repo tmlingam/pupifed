@@ -1,0 +1,190 @@
+.calendar_date_select {
+padding: 4px;
+font-weight: bold;
+background: rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+display: inline-block;
+vertical-align: baseline;
+zoom: 1;
+-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
+box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.4);
+}
+/* this is a fun ie6 hack to get drop downs to stay behind the popup window.  This should always be just underneath .calendar_date_select */
+iframe.ie6_blocker {
+  position: absolute;
+  z-index: 999;
+}
+
+.calendar_date_select  thead th {
+  font-weight:bold;
+  /*background-color: #000;*/
+  /*border-top:1px solid #777;*/
+  /*border-bottom:2px solid #334;*/
+  color: black !important;
+  background: #FFF;
+}
+
+.calendar_date_select .cds_buttons {
+  background: #222;
+text-align: center;
+padding: 5px 0px;
+color: #FFF;
+  /*background-color: #000055;*/
+}
+
+.calendar_date_select .cds_footer {
+  background-color: black;
+  padding:3px;
+  font-size:12px;
+  text-align:center;
+}
+
+.calendar_date_select table {
+  position: relative;
+margin: 0 0 1px;
+border-collapse: separate;
+border-left: 1px solid #979797;
+border-right: 1px solid #979797;
+border-bottom: 1px solid #bbb;
+border-radius: 0 0 3px 3px;
+-webkit-box-shadow: 1px 0 rgba(0, 0, 0, 0.1), -1px 0 rgba(0, 0, 0, 0.1);
+box-shadow: 1px 0 rgba(0, 0, 0, 0.1), -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.calendar_date_select .cds_header {
+  width: 100%;
+padding-bottom: 1px;
+line-height: 32px;
+color: white;
+text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+background: #629c2e;
+border-radius: 3px 3px 0 0;
+background-image: -webkit-linear-gradient(top, #89c84d, #629c2e 75%, #548d20);
+background-image: -moz-linear-gradient(top, #89c84d, #629c2e 75%, #548d20);
+background-image: -o-linear-gradient(top, #89c84d, #629c2e 75%, #548d20);
+background-image: linear-gradient(to bottom, #89c84d, #629c2e 75%, #548d20);
+-webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 1px rgba(0, 0, 0, 0.1), inset 0 2px rgba(255, 255, 255, 0.25), 0 1px 3px rgba(0, 0, 0, 0.4);
+box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), inset 0 1px rgba(0, 0, 0, 0.1), inset 0 2px rgba(255, 255, 255, 0.25), 0 1px 3px rgba(0, 0, 0, 0.4);
+text-align: center;
+}
+
+.calendar_date_select .cds_header span {
+  font-size:15px;
+  color: black;
+  font-weight: bold;
+}
+
+.calendar_date_select select { font-size:11px;}
+
+.calendar_date_select .cds_header a:hover {
+  color: white;
+}
+.calendar_date_select .cds_header a {
+  width:22px;
+  height:20px;
+  text-decoration: none;
+  font-size:14px;
+  /*color:black !important;*/
+}
+
+.calendar_date_select .cds_header a.prev {
+  padding-top: 2px;
+  float:left;
+  color: white;
+}
+
+.calendar_date_select .cds_header a.next {
+  padding-top: 2px;
+  float:right;
+  color: white;
+  /*-moz-border-radius:10px;*/
+  /*-webkit-border-radius:10px;*/
+  /*border:1px solid white;*/
+}
+
+.calendar_date_select .cds_header a.close {
+  float:right;
+  display:none;
+}
+
+
+.calendar_date_select .cds_header select.month {
+-webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+background: #629c2e !important;
+background-image: -webkit-linear-gradient(top, #89c84d, #629c2e 75%, #548d20) !important;
+background-image: -moz-linear-gradient(top, #89c84d, #629c2e 75%, #548d20) !important;
+background-image: -o-linear-gradient(top, #89c84d, #629c2e 75%, #548d20) !important;
+background-image: linear-gradient(to bottom, #89c84d, #629c2e 75%, #548d20) !important;
+border: none !important;
+color: #FFF !important;
+width: 66px !important;
+text-indent: 15px !important;
+}
+
+.calendar_date_select .cds_header select.year {
+-webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+  text-shadow: 0 -1px rgba(0, 0, 0, 0.3);
+background: #629c2e !important;
+border-radius: 3px 3px 0 0;
+background-image: -webkit-linear-gradient(top, #89c84d, #629c2e 75%, #548d20) !important;
+background-image: -moz-linear-gradient(top, #89c84d, #629c2e 75%, #548d20) !important;
+background-image: -o-linear-gradient(top, #89c84d, #629c2e 75%, #548d20) !important;
+background-image: linear-gradient(to bottom, #89c84d, #629c2e 75%, #548d20) !important;
+width: 70px;
+border: none !important;
+color: #FFF !important;
+text-indent: 15px !important;
+}
+.calendar_date_select .cds_header select option{
+	background: #FFF;
+	color: #000;
+}
+.calendar_date_select .cds_buttons a {
+  color: white;
+  font-size: 9px;
+}
+
+.calendar_date_select td {
+  position: relative;
+line-height: 28px;
+color: #555;
+text-align: center;
+background: white;
+width: 30px;
+font-size: 12px;
+border-top: 1px solid #eaeaea;
+border-left: 1px solid #eaeaea;
+}
+.calendar_date_select td.weekend {
+  background-color: #EEE;
+}
+
+.calendar_date_select td div.other {
+  color: #a9a9a9;
+}
+
+.calendar_date_select td.selected {
+  background-color:white;
+  color:black;
+}
+
+.calendar_date_select td:hover {
+  background-color: #999;
+}
+
+.calendar_date_select td.disabled div {
+  color: #000044;
+}
+.calendar_date_select td.today {
+  border: 1px dashed blue;
+}
+
+.fieldWithErrors .calendar_date_select {
+  border: 2px solid red;
+}

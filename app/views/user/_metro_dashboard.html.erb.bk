@@ -1,0 +1,511 @@
+<div class="extender"></div>
+<div class="metro-area">
+  <ul class="metro-shortcut clearfix unstyled">
+    <% if @user.admin? %>
+    <li class="item">
+      <a href='/student_attendance'>
+        <div class="flip-container high" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color green high">
+                <img class="attendance" src='/images/dashboard_buttons/Attendance.png'>
+              </div>
+        <div class="overlay">
+                <h4 class="header light"><%=t('attendance')%></h4>
+         </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue high">
+                <h4 class="header light"><%=t('attendance_link_title')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href='/configuration'>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color dark-grey">
+                <img class="settings" src='/images/dashboard_buttons/Settings-Glyph.png'>
+              </div>
+        <div class="overlay">
+                <h4 class="header light"><%=t('settings')%></h4>
+        </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue">
+                <h4 class="header light"><%=t('setting_link_title')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="item">
+      <a href='/user'>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color red">
+                <img class="manage_users" src='/images/dashboard_buttons/Manage-Users.png'>
+              </div>
+        <div class="overlay">
+                <h4 class="header light">User Management</h4>
+	</div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue">
+                <h4 class="header light"><%=t('user_link_title')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href='/student'>
+        <div class="flip-container high" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color blue high">
+                <img class="student_details" src='/images/dashboard_buttons/Students-details-Glyph.png'>
+              </div>
+        <div class="overlay">
+                <h4 class="header light">Search Students</h4>
+	</div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue high">
+                <h4 class="header light"><%=t('student_link_title')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="item">
+      <% if @config.include?('HR') %>
+        <a href='/employee/hr'>
+          <div class="flip-container high" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+              <div class="front">
+                <div class="box bg-color skin high">
+                  <img class="hr" src='/images/dashboard_buttons/HR.png'>
+                </div>
+        <div class="overlay">
+                  <h4 class="header light">School Mgmt.</h4>
+	</div>
+              </div>
+              <div class="back">
+                <div class="box bg-color blue high">
+                  <h4 class="header light"><%=t('hr_link_title')%></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      <% end %>
+      <% if @config.include?('Finance') %>
+        <a href='/finance'>
+          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+            <div class="flipper">
+              <div class="front">
+                <div class="box bg-color purple">
+                  <img class="finance" src='/images/dashboard_buttons/Finance-Glyph.png'>
+                </div>
+        <div class="overlay">
+                  <h4 class="header light">Money Matters</h4>
+	</div>
+              </div>
+              <div class="back">
+                <div class="box bg-color blue">
+                  <h4 class="header light"><%=t('finance_link_title')%></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      <% end %>
+    </li>
+    <li class="item">
+      <a href='/student/admission1'>
+        <div class="flip-container high" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color green high">
+                <img class="admission" src='/images/dashboard_buttons/Admission-Glyph.png'>
+              </div>
+        <div class="overlay">
+                <h4 class="header light"><%=t('admission')%></h4>
+	</div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue high">
+                <h4 class="header light"><%=t('admission_link_title')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href='/library'>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color orange">
+                <img class="library" src='/images/dashboard_buttons/Library-Glyph.png'>
+              </div>
+        <div class="overlay">
+                <h4 class="header light">Books</h4>
+	</div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue">
+                <h4 class="header light">Manage Library</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="item">
+      <a href='/calendar'>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color brown">
+                <img class="calendar" src='/images/dashboard_buttons/Calendar-Glyph-small.png'>
+              </div>
+        <div class="overlay">
+                <h4 class="header light">Organizer</h4>
+	</div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue">
+                <h4 class="header light"><%=t('view_calendar')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href='/timetable'>
+        <div class="flip-container high" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color yellow high">
+                <img class="timetable" src='/images/dashboard_buttons/Timetable.png'>
+              </div>
+        <div class="overlay">
+                <h4 class="header light">TimetableCentral<sup style="font-size: 12px">TM</sup></h4>
+	</div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue high">
+                <h4 class="header light"><%=t('timetable_link_title')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="item">
+      <a href='/exam'>
+        <div class="flip-container high" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color light-green high">
+                <img class="exams" src='/images/dashboard_buttons/exam-centre.png'>
+              </div>
+        <div class="overlay">
+                <h4 class="header light">Exams/Reports</h4>
+	</div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue high">
+                <h4 class="header light"><%=t('manage_examinations')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="item">
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color dark-blue">
+                <img class="virtual" src='/images/dashboard_buttons/Comp-Glyph.png'>
+                <div class="overlay">
+                	<h4 class="header light">Conference</h4>
+				</div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue">
+                <!-- <h4 class="header light"><%#=t('course_and_batch')%></h4> -->
+                <h4 class="header light"><a href="http://37.139.3.86/" style="text-decoration:none; color:white;"><%=t('manage_conference')%></a></h4>
+                <h4 class="header light"><a href="/online_meeting_servers" style="text-decoration:none; color:white;"><%=t('list_servers')%></a></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+    </li>
+    <div id="more-tiles" style="display:none">
+    <li class="item">
+      <a href=''>
+        <div class="flip-container high" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color dark-blue high">
+                <img class="virtual" src='/images/dashboard_buttons/Comp-Glyph.png'>
+                <div class="overlay">
+                <h4 class="header light">Manage News</h4>
+</div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue high">
+                <h4 class="header light"><%=t('course_and_batch')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href=''>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color dark-blue">
+                <img class="virtual" src='/images/dashboard_buttons/Comp-Glyph.png'>
+                <div class="overlay">
+                <h4 class="header light">Video of the day</h4>
+</div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue">
+                <h4 class="header light"><%=t('course_and_batch')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="item">
+      <a href=''>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color dark-blue">
+                <img class="virtual" src='/images/dashboard_buttons/Comp-Glyph.png'>
+                <div class="overlay">
+                <h4 class="header light">How stuff works</h4>
+</div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue">
+                <h4 class="header light"><%=t('course_and_batch')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href=''>
+        <div class="flip-container high" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color dark-blue high">
+                <img class="virtual" src='/images/dashboard_buttons/Comp-Glyph.png'>
+                <div class="overlay">
+                <h4 class="header light">Thought for the day</h4>
+</div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue high">
+                <h4 class="header light"><%=t('course_and_batch')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="item">
+      <a href=''>
+        <div class="flip-container high" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color dark-grey high">
+                <img class="virtual" src='/images/dashboard_buttons/Group-Therapy.png'>
+                <div class="overlay">
+                <h4 class="header light">Group Therapy</h4>
+</div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue high">
+                <h4 class="header light"><%=t('course_and_batch')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href=''>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color dark-blue">
+                <img class="virtual" src='/images/dashboard_buttons/transparent.png'>
+                <div class="overlay">
+                <h4 class="header light">Wiki</h4>
+</div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue">
+                <h4 class="header light"><%=t('course_and_batch')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="item">
+      <a href=''>
+        <div class="flip-container high" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color dark-blue high">
+                <img class="virtual" src='/images/dashboard_buttons/transparent.png'>
+                <div class="overlay">
+                <h4 class="header light">Gallery</h4>
+</div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue high">
+                <h4 class="header light"><%=t('course_and_batch')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href=''>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color dark-blue">
+                <img class="virtual" src='/images/dashboard_buttons/transparent.png'>
+                <div class="overlay">
+                <h4 class="header light">School Webpage Link</h4>
+</div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue">
+                <h4 class="header light"><%=t('course_and_batch')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="item">
+      <a href=''>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color dark-blue">
+                <img class="virtual" src='/images/dashboard_buttons/transparent.png'>
+                <div class="overlay">
+                <h4 class="header light">Quiz of the day</h4>
+</div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue">
+                <h4 class="header light"><%=t('course_and_batch')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href=''>
+        <div class="flip-container high" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color dark-blue high">
+                <img class="virtual" src='/images/dashboard_buttons/transparent.png'>
+                <div class="overlay">
+                <h4 class="header light">Blogs</h4>
+</div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue high">
+                <h4 class="header light"><%=t('course_and_batch')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+    <li class="item">
+      <a href=''>
+        <div class="flip-container high" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color dark-blue high">
+                <img class="virtual" src='/images/dashboard_buttons/transparent.png'>
+                <div class="overlay">
+                <h4 class="header light">Educational Games</h4>
+</div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue high">
+                <h4 class="header light"><%=t('course_and_batch')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href=''>
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front">
+              <div class="box bg-color dark-blue">
+                <img class="virtual" src='/images/dashboard_buttons/transparent.png'>
+                <div class="overlay">
+                <h4 class="header light">Downloads</h4>
+</div>
+              </div>
+            </div>
+            <div class="back">
+              <div class="box bg-color blue">
+                <h4 class="header light"><%=t('course_and_batch')%></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+    </div>
+
+    
+  <% end %>
+  </ul>
+  
+</div>
+<div style="margin-left: 47%; width: 150px;">
+        <img src="/images/dashboard_buttons/Plus.jpg" style="width: 50px; height: 50px; margin-top: 20px;" onclick="toggle_more('more-tiles')">
+</div>
+
+<script type="text/javascript">
+	function toggle_more(id) {
+		var el = document.getElementById(id);
+		if(el.style.display == 'block')
+        	el.style.display = 'none';
+		else
+          	el.style.display = 'block';
+          	}
+</script>
